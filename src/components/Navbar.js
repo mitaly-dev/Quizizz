@@ -2,12 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { PlusIcon} from '@heroicons/react/24/solid'
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../images/logo .png'
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="px-4 py-5 mx-auto w-full md:max-w-full md:px-24 lg:px-8 bg-[#5AA5B7]">
-        <div className="relative flex items-center justify-between">
+        <div className="relative flex items-center justify-between bg-[#5AA5B7]">
           <a
             href="/"
             aria-label="Company"
@@ -30,10 +31,10 @@ const Navbar = () => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              Company
+              <img src={logo} alt="logo" />
             </span>
           </a>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className="flex items-center hidden space-x-8 lg:flex bg-[#5AA5B7]">
             <li>
               <NavLink
                 to="/home"
@@ -91,7 +92,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="lg:hidden">
+          <div className="lg:hidden ">
             <button
               aria-label="Open Menu"
               title="Open Menu"
@@ -114,8 +115,8 @@ const Navbar = () => {
               </svg>
             </button>
             {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full">
-                <div className="p-5 bg-white border rounded shadow-sm">
+              <div className="absolute top-0 left-0 w-full  ">
+                <div className="p-5 bg-[#5AA5B7] border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <a
@@ -161,7 +162,7 @@ const Navbar = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul className="space-y-4">
+                    <ul className="space-y-4 bg-[#5AA5B7]">
                       <li>
                         <NavLink
                           to="/home"
