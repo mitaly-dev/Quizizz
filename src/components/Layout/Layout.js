@@ -13,8 +13,8 @@ const Layout = () => {
     return (
        <DataContext.Provider value={[categoriesData]}>
           <Navbar></Navbar>
-         <Outlet></Outlet>
-         <Footer></Footer>
+          <Outlet></Outlet>
+          <Footer></Footer>
        </DataContext.Provider>
     );
 };
