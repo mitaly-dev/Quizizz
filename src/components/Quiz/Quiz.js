@@ -21,9 +21,9 @@ const Quiz = () => {
                 </div>
             <div className='col-span-2 bg-[#1b8097d6] rounded-lg border-[#ddd]'>
                 <div className='sticky top-0 px-5 py-10 font-semibold text-white'>
-                    <h3 className='text-center text-2xl mb-5'>Correct Answer : {correctQuize.length}</h3>
+                    <h3 className='text-center text-2xl mb-5 '>Correct Answer : {correctQuize.length}</h3>
                     {
-                    correctQuize.map((correct,index)=><h3 key={index} className="text-lg">{index+1+') '} {correct}</h3>)
+                    correctQuize.map((correct,index)=><h3 key={index} className="text-lg leading-9">{index+1+') '} {correct}</h3>)
                     }
                 </div>
             </div>

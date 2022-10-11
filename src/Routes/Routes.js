@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         loader:async({params})=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizeId}`),
         element:<Quiz></Quiz>
         }
-       
+
     ]
 }
 ])
