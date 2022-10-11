@@ -1,14 +1,11 @@
-import { CheckBadgeIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 import React from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
-import { useContext } from 'react';
 import { toast } from 'react-toastify';
-import { CorrectQuizeContext, QuizeIdContext } from '../Layout/Layout';
 
-const SingleQuiz = ({quize}) => {
+
+const SingleQuiz = ({quize,setCorrect}) => {
     let [open,setOpen] = useState(true)
-    const [correctQuize,setCorrectQuize] = useContext(CorrectQuizeContext)
     let {correctAnswer,options,question} = quize
 
     // option click function
@@ -16,7 +13,7 @@ const SingleQuiz = ({quize}) => {
        if(option===correctAnswer){
         event.target.className='font-medium text-lg mb-3 w-full border rounded-lg py-5 text-left px-10 bg-gray-50 text-gray-900'
         toast.success(`Answer is Correct ✔️` , {autoClose:1000})
-        setCorrectQuize(prev=>[...prev,option])
+        setCorrect(prev=>[...prev,option])
         event.target.setAttribute('disabled',true)
        }
        else{

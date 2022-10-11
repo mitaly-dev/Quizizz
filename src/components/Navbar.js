@@ -2,13 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { PlusIcon} from '@heroicons/react/24/solid'
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../images/logo .png'
+import logo from '../images/logo.svg'
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="px-4 py-5 mx-auto w-full md:max-w-full md:px-24 lg:px-8 bg-[#5AA5B7]">
-        <div className="relative flex items-center justify-between bg-[#5AA5B7]">
+        <div className="relative flex items-center justify-between bg-[#5AA5B7] z-50">
           <a
             href="/"
             aria-label="Company"
@@ -34,13 +34,13 @@ const Navbar = () => {
               <img src={logo} alt="logo" />
             </span>
           </a>
-          <ul className="flex items-center hidden space-x-8 lg:flex bg-[#5AA5B7]">
+          <ul className="flex items-center hidden space-x-4 lg:flex bg-[#5AA5B7] z-50">
             <li>
               <NavLink
                 to="/home"
                 aria-label="Our product"
                 title="Our product"
-                className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
               >
                 <span>Home</span>
                 <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 to="/category"
                 aria-label="Our product"
                 title="Our product"
-                className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
               >
                 <span>Category</span>
                 <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 to="/statistics"
                 aria-label="Statistics"
                 title="Statistics"
-                className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
               >
                 <span>Statistics</span>
                 <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 to="/blog"
                 aria-label="Blog"
                 title="Blog"
-                className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
               >
                 <span>Blog</span>
                 <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -83,12 +83,12 @@ const Navbar = () => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
-                to="/"
+                to="/signin"
                 className="border inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
               >
-                Sign up
+                Sign In
               </Link>
             </li>
           </ul>
@@ -141,7 +141,7 @@ const Navbar = () => {
                           <rect x="14" y="11" width="7" height="12" />
                         </svg>
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Company
+                          <img src={logo} alt="" />
                         </span>
                       </a>
                     </div>
@@ -162,13 +162,13 @@ const Navbar = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul className="space-y-4 bg-[#5AA5B7]">
+                    <ul className="space-y-4 bg-[#5AA5B7] ">
                       <li>
                         <NavLink
                           to="/home"
                           aria-label="Our product"
                           title="Our product"
-                          className="flex font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
                         >
                           <span>Home</span>
                           <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -179,7 +179,7 @@ const Navbar = () => {
                           to="/category"
                           aria-label="Our product"
                           title="Our product"
-                          className="flex font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
                         >
                           <span>Category</span>
                           <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -190,7 +190,7 @@ const Navbar = () => {
                           to="/statistics"
                           aria-label="Product pricing"
                           title="Product pricing"
-                          className="flex font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
                         >
                           <span>Statistics</span>
                           <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -201,7 +201,7 @@ const Navbar = () => {
                           to="/blog"
                           aria-label="About us"
                           title="About us"
-                          className="flex font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className={({isActive})=>isActive ? "border rounded-lg py-2 bg-[#ffffff26] flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400" : "flex px-4 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"}
                         >
                           <span>Blog</span>
                           <PlusIcon className='w-3 text-white'></PlusIcon>
@@ -209,12 +209,12 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                         to="/"
+                         to="/signin"
                           className="border inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                           aria-label="Sign up"
                           title="Sign up"
                         >
-                          Sign up
+                          Sign In
                         </Link>
                       </li>
                     </ul>
