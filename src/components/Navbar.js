@@ -60,8 +60,8 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/statistics"
-                aria-label="Product pricing"
-                title="Product pricing"
+                aria-label="Statistics"
+                title="Statistics"
                 className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 <span>Statistics</span>
@@ -71,8 +71,8 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/blog"
-                aria-label="About us"
-                title="About us"
+                aria-label="Blog"
+                title="Blog"
                 className="flex px-2 font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 <span>Blog</span>
