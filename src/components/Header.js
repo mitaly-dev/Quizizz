@@ -10,19 +10,7 @@ const Header = () => {
           <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
             <Link to="/" className="mb-6 sm:mx-auto">
               <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gPX4Fe6kRnA9cwgkoZI8s-YZRa_YU6nVdFVRchxFJA&s" alt="" />
               </div>
             </Link >
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -60,7 +48,7 @@ const Header = () => {
             <div>
               <Link
                 to="/category"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide border text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide border text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:bg-[#a4c6d9] hover:text-black"
               >
                 Get started
               </Link>
