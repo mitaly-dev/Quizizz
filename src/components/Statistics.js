@@ -8,8 +8,8 @@ const Statistics = () => {
    let data = categoriesData
     
     return (
-       <div className='bg-[#5AA5B7] min-h-[90vh] w-full py-10'>
-         <h3 className='font-bold text-4xl lg:mb-14 w-10/12 sm:w-7/12 xl:w-4/12 m-auto text-center uppercase pb-6 lg:pb-0'>Quiz Chart</h3>
+       <div className='bg-[#5AA5B7] min-h-[90vh] w-full py-3 sm:py-10'>
+         <h3 className='font-bold text-3xl md:text-4xl lg:mb-14 w-10/12 sm:w-7/12 xl:w-4/12 m-auto text-center uppercase pb-6 lg:pb-0'>Quiz Chart</h3>
         <div className='w-full md:w-2/4 h-[400px] m-auto'>
         <ResponsiveContainer width="100%" height="100%">
            <BarChart

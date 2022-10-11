@@ -33,7 +33,7 @@ const SingleQuiz = ({quize,setCorrect}) => {
     }
    
     return (
-        <div className=' m-auto mb-10 bg-[#438d9f] text-white p-3 py-5 sm:p-10 rounded-lg shadow-lg shadow-teal-800'>
+        <div className=' m-auto mb-10 bg-[#438d9f] text-white border border-[#ddd] p-3 py-5 sm:p-10 rounded-lg shadow-lg shadow-teal-800'>
            <div className='flex justify-between text-xl sm:text-2xl font-semibold mb-5 text-center'>
                 {
                 <div className='px-3 md:px-10' dangerouslySetInnerHTML={{__html: question}}></div>
