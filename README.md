@@ -1,4 +1,4 @@
-# Quizizz
+# Project Name : Quizizz
 
 
 ## live website : https://quizizzz.netlify.app/
